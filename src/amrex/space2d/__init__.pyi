@@ -30,6 +30,7 @@ amrex
    StructOfArrays
    Utility
    Vector
+   VisMF
 
 """
 
@@ -285,6 +286,7 @@ from amrex.space2d.amrex_2d_pybind import (
     Vector_Long,
     Vector_Real,
     Vector_string,
+    VisMF,
     XDim3,
     begin,
     coarsen,
@@ -556,6 +558,7 @@ __all__ = [
     "Vector_Real",
     "Vector_int",
     "Vector_string",
+    "VisMF",
     "XDim3",
     "amrex_2d_pybind",
     "begin",

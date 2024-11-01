@@ -30,6 +30,7 @@ amrex
    StructOfArrays
    Utility
    Vector
+   VisMF
 
 """
 
@@ -285,6 +286,7 @@ __all__ = [
     "Vector_Real",
     "Vector_int",
     "Vector_string",
+    "VisMF",
     "XDim3",
     "begin",
     "coarsen",
@@ -19867,6 +19869,25 @@ class Vector_string:
         Remove the first item from the list whose value is x. It is an error if there is no such item.
         """
     def size(self) -> int: ...
+
+class VisMF:
+    @staticmethod
+    @typing.overload
+    def Read(name: str) -> MultiFab:
+        """
+        Reads a MultiFab from the specified file
+        """
+    @staticmethod
+    @typing.overload
+    def Read(name: str, mf: MultiFab) -> None:
+        """
+        Reads a MultiFab from the specified file into the given MultiFab. The BoxArray on the disk must match the BoxArray * in mf
+        """
+    @staticmethod
+    def Write(mf: FabArray_FArrayBox, name: str) -> int:
+        """
+        Writes a Multifab to the specified file
+        """
 
 class XDim3:
     x: float
