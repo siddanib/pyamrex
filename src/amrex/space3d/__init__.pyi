@@ -27,6 +27,7 @@ amrex
    Periodicity
    PlotFileUtil
    PODVector
+   SmallMatrix
    StructOfArrays
    Utility
    Vector
@@ -43,6 +44,7 @@ from amrex.extensions.ArrayOfStructs import register_AoS_extension
 from amrex.extensions.MultiFab import register_MultiFab_extension
 from amrex.extensions.ParticleContainer import register_ParticleContainer_extension
 from amrex.extensions.PODVector import register_PODVector_extension
+from amrex.extensions.SmallMatrix import register_SmallMatrix_extension
 from amrex.extensions.StructOfArrays import register_SoA_extension
 from amrex.space3d.amrex_3d_pybind import (
     AlmostEqual,
@@ -233,6 +235,15 @@ from amrex.space3d.amrex_3d_pybind import (
     PODVector_uint64_std,
     RealBox,
     RealVect,
+    SmallMatrix_1x6_F_SI1_double,
+    SmallMatrix_1x6_F_SI1_float,
+    SmallMatrix_1x6_F_SI1_longdouble,
+    SmallMatrix_6x1_F_SI1_double,
+    SmallMatrix_6x1_F_SI1_float,
+    SmallMatrix_6x1_F_SI1_longdouble,
+    SmallMatrix_6x6_F_SI1_double,
+    SmallMatrix_6x6_F_SI1_float,
+    SmallMatrix_6x6_F_SI1_longdouble,
     StructOfArrays_0_0_arena,
     StructOfArrays_0_0_default,
     StructOfArrays_0_0_pinned,
@@ -482,6 +493,15 @@ __all__ = [
     "Print",
     "RealBox",
     "RealVect",
+    "SmallMatrix_1x6_F_SI1_double",
+    "SmallMatrix_1x6_F_SI1_float",
+    "SmallMatrix_1x6_F_SI1_longdouble",
+    "SmallMatrix_6x1_F_SI1_double",
+    "SmallMatrix_6x1_F_SI1_float",
+    "SmallMatrix_6x1_F_SI1_longdouble",
+    "SmallMatrix_6x6_F_SI1_double",
+    "SmallMatrix_6x6_F_SI1_float",
+    "SmallMatrix_6x6_F_SI1_longdouble",
     "StructOfArrays_0_0_arena",
     "StructOfArrays_0_0_default",
     "StructOfArrays_0_0_pinned",
@@ -538,6 +558,7 @@ __all__ = [
     "register_MultiFab_extension",
     "register_PODVector_extension",
     "register_ParticleContainer_extension",
+    "register_SmallMatrix_extension",
     "register_SoA_extension",
     "size",
     "ubound",
