@@ -203,7 +203,7 @@ factory :
             .def("norm1", py::overload_cast< int, int, bool >(&T::norm1, py::const_))
             .def("norm1", py::overload_cast< Vector<int> const &, int, bool >(&T::norm1, py::const_))
 
-            .def("norm2", py::overload_cast< int >(&T::norm2, py::const_))
+            .def("norm2", py::overload_cast< int, int >(&T::norm2, py::const_))
             .def("norm2", py::overload_cast< int, Periodicity const& >(&T::norm2, py::const_))
             .def("norm2", py::overload_cast< Vector<int> const & >(&T::norm2, py::const_))
         ;
